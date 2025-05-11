@@ -8,7 +8,7 @@ function Header() {
           <li>
             <Link
               href="/"
-              className="text-sm font-medium uppercase text-stone-400"
+              className="text-sm font-medium uppercase text-stone-400 hover:text-stone-900 transition-all duration-200"
             >
               Home
             </Link>
@@ -16,7 +16,7 @@ function Header() {
           <li>
             <Link
               href="/posts"
-              className="text-sm font-medium uppercase text-stone-400"
+              className="text-sm font-medium uppercase text-stone-400 hover:text-stone-900 transition-all duration-200"
             >
               Posts
             </Link>
