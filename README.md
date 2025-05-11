@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Blog with Contentful CMS
+
+This project is a blog built with [Next.js](https://nextjs.org/) and powered by [Contentful](https://www.contentful.com/), a headless CMS for managing content easily and flexibly.
+
+![Website screenshot](public/readme.jpg "jpg")
+
+## Features
+
+- ✅ Static Site Generation (SSG) with Next.js
+- 📄 Markdown / Rich text content from Contentful
+- 📦 Responsive image rendering with Next.js Image optimization
+- 💨 Styled with Tailwind CSS
+- 📰 Dynamic routes for blog posts
+- 🧑 Author support, dates, and cover images
+
+## Technologies
+
+- [Next.js](https://nextjs.org/)
+- [Contentful](https://www.contentful.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/AslanovRustam/contentful.git
+cd contentful
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn
+```
+
+### 3. Create .env.local and add your environment variables
+
+```bash
+CONTENTFUL_SPACE_ID=your_space_id
+CONTENTFUL_ACCESS_TOKEN=your_access_token
+CONTENTFUL_PREVIEW_TOKEN=your_preview_token
+CONTENTFUL_PREVIEW_SECRET=your_preview_secret
+```
+
+You can get these keys from your Contentful account under API settings.
+
+### 4. Run the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to see your blog.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Content Modeling in Contentful
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Your Contentful space should include:
 
-## Learn More
+A Post content type with fields like:
 
-To learn more about Next.js, take a look at the following resources:
+title (Short text)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+slug (Short text)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+coverImage (Media)
 
-## Deploy on Vercel
+excerpt (Text)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+content (Rich Text or Markdown)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+author (Reference to Author)
+
+createdDate (Date)
+
+video (optional, for embeds like YouTube)
+
+An Author content type with:
+
+name
+
+picture (Media)
