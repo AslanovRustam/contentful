@@ -3,11 +3,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className=" font-[family-name:var(--font-geist-sans)]">
-      {" "}
       <section className="section">
         <div className="container text-center py-24">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
-            Hi, I'm Rustam
+            Hi, I&apos;m Rustam
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Welcome to my blog! Here, I share thoughts, tips, and experiences
